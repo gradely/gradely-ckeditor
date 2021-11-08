@@ -24,6 +24,7 @@ import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import MathType from '@wiris/mathtype-ckeditor5/src/plugin';
+import Mathematics from 'ckeditor5-math/src/math';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
@@ -54,6 +55,7 @@ ClassicEditor.builtinPlugins = [
     Indent,
     Link,
     MathType,
+    Mathematics,
     List,
     MediaEmbed,
     Paragraph,
