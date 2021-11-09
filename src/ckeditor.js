@@ -25,6 +25,7 @@ import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import MathType from '@wiris/mathtype-ckeditor5/src/plugin';
 import Mathematics from 'ckeditor5-math/src/math';
+import AutoformatMathematics from 'ckeditor5-math/src/autoformatmath';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
@@ -56,6 +57,7 @@ ClassicEditor.builtinPlugins = [
     Link,
     MathType,
     Mathematics,
+    AutoformatMathematics,
     List,
     MediaEmbed,
     Paragraph,
@@ -67,15 +69,6 @@ ClassicEditor.builtinPlugins = [
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
-    math: {
-        engine: 'mathjax', // or katex or function. E.g. (equation, element, display) => { ... }
-        lazyLoad: undefined, // async () => { ... }, called once before rendering first equation if engine doesn't exist. After resolving promise, plugin renders equations.
-        outputType: 'script', // or span
-        forceOutputType: false, // forces output to use outputType
-        enablePreview: true, // Enable preview view
-        previewClassName: [], // Class names to add to previews
-        popupClassName: [] // Class names to add to math popup balloon
-    },
     toolbar: {
         items: [
             'heading',
@@ -95,7 +88,8 @@ ClassicEditor.defaultConfig = {
             'insertTable',
             'mediaEmbed',
             'undo',
-            'redo'
+            'redo',
+            'math'
         ]
     },
     image: {
